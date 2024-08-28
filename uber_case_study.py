@@ -8,7 +8,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Load the dataset
-df = pd.read_csv('/content/Uber Request Data.csv', parse_dates=[4, 5], dayfirst=True, na_values="NA")
+df = pd.read_csv('Uber Request Data.csv', parse_dates=[4, 5], dayfirst=True, na_values="NA")
 
 # Manually convert 'Request timestamp' and 'Drop timestamp' to datetime
 df['Request timestamp'] = pd.to_datetime(df['Request timestamp'], format='%d-%m-%Y %H:%M:%S', errors='coerce')
